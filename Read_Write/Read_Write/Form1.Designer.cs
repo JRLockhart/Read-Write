@@ -38,6 +38,8 @@
             this.addressTB = new System.Windows.Forms.TextBox();
             this.addEmployeeBTN = new System.Windows.Forms.Button();
             this.readFilesRTB = new System.Windows.Forms.RichTextBox();
+            this.findEmployeeBTN = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -128,11 +130,27 @@
             this.readFilesRTB.TabIndex = 9;
             this.readFilesRTB.Text = "";
             // 
+            // findEmployeeBTN
+            // 
+            this.findEmployeeBTN.Location = new System.Drawing.Point(280, 211);
+            this.findEmployeeBTN.Name = "findEmployeeBTN";
+            this.findEmployeeBTN.Size = new System.Drawing.Size(96, 34);
+            this.findEmployeeBTN.TabIndex = 10;
+            this.findEmployeeBTN.Text = "Find Employee";
+            this.findEmployeeBTN.UseVisualStyleBackColor = true;
+            this.findEmployeeBTN.Click += new System.EventHandler(this.findEmployeeBTN_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.InitialDirectory = "C:\\Users\\james\\Source\\Repos\\Read-Write\\Read_Write\\Read_Write\\bin";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 257);
+            this.Controls.Add(this.findEmployeeBTN);
             this.Controls.Add(this.readFilesRTB);
             this.Controls.Add(this.addEmployeeBTN);
             this.Controls.Add(this.addressTB);
@@ -165,6 +183,8 @@
         private System.Windows.Forms.TextBox addressTB;
         private System.Windows.Forms.Button addEmployeeBTN;
         private System.Windows.Forms.RichTextBox readFilesRTB;
+        private System.Windows.Forms.Button findEmployeeBTN;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
