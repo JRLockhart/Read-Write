@@ -13,6 +13,9 @@ namespace Read_Write
 {
     public partial class Form1 : Form
     {
+
+        private string filename;
+
         public Form1()
         {
             InitializeComponent();
@@ -44,10 +47,11 @@ namespace Read_Write
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             
-
+            //set to the folder where employees are saved
             openFileDialog1.InitialDirectory = @"C:\MyFolder\Default\";
             openFileDialog1.Title = "Search for Employee";
 
+            //pop open a message box if file doesn't exist
             openFileDialog1.CheckFileExists = true;
             openFileDialog1.CheckPathExists = true;
 
@@ -60,13 +64,30 @@ namespace Read_Write
             openFileDialog1.ShowReadOnly = true;
 
             
-
+            //populate the read files text box with txt file content
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string name = openFileDialog1.FileName;
                 readFilesRTB.Clear();
-                readFilesRTB.Text = File.ReadAllText(name);
+                readFilesRTB.Text += File.ReadAllText(name) + "\n";
 
+                filename = name;
+
+            }
+        }
+
+        //allow user to update the information in the rich text box
+        private void updateBTN_Click(object sender, EventArgs e)
+        {
+            //first check to see if text exists
+            if (string.IsNullOrEmpty(readFilesRTB.Text))
+            {
+                MessageBox.Show("There is nothing to update");
+            }
+            else
+            {
+                //save to the current file
+                File.WriteAllText(filename, readFilesRTB.Text);
             }
         }
     }

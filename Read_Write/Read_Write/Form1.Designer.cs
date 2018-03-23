@@ -40,6 +40,8 @@
             this.readFilesRTB = new System.Windows.Forms.RichTextBox();
             this.findEmployeeBTN = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.updateBTN = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -145,11 +147,22 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.InitialDirectory = "C:\\Users\\james\\Source\\Repos\\Read-Write\\Read_Write\\Read_Write\\bin";
             // 
+            // updateBTN
+            // 
+            this.updateBTN.Location = new System.Drawing.Point(442, 211);
+            this.updateBTN.Name = "updateBTN";
+            this.updateBTN.Size = new System.Drawing.Size(96, 34);
+            this.updateBTN.TabIndex = 11;
+            this.updateBTN.Text = "Update";
+            this.updateBTN.UseVisualStyleBackColor = true;
+            this.updateBTN.Click += new System.EventHandler(this.updateBTN_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 257);
+            this.Controls.Add(this.updateBTN);
             this.Controls.Add(this.findEmployeeBTN);
             this.Controls.Add(this.readFilesRTB);
             this.Controls.Add(this.addEmployeeBTN);
@@ -185,6 +198,8 @@
         private System.Windows.Forms.RichTextBox readFilesRTB;
         private System.Windows.Forms.Button findEmployeeBTN;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button updateBTN;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
