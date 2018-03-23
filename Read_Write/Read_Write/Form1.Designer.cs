@@ -42,6 +42,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.updateBTN = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.deleteBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,14 +83,14 @@
             // 
             // firstNameTB
             // 
-            this.firstNameTB.Location = new System.Drawing.Point(108, 23);
+            this.firstNameTB.Location = new System.Drawing.Point(89, 23);
             this.firstNameTB.Name = "firstNameTB";
             this.firstNameTB.Size = new System.Drawing.Size(156, 20);
             this.firstNameTB.TabIndex = 4;
             // 
             // lastNameTB
             // 
-            this.lastNameTB.Location = new System.Drawing.Point(108, 48);
+            this.lastNameTB.Location = new System.Drawing.Point(89, 48);
             this.lastNameTB.Name = "lastNameTB";
             this.lastNameTB.Size = new System.Drawing.Size(156, 20);
             this.lastNameTB.TabIndex = 5;
@@ -101,14 +102,14 @@
             this.genderCB.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.genderCB.Location = new System.Drawing.Point(108, 73);
+            this.genderCB.Location = new System.Drawing.Point(89, 73);
             this.genderCB.Name = "genderCB";
             this.genderCB.Size = new System.Drawing.Size(156, 21);
             this.genderCB.TabIndex = 6;
             // 
             // addressTB
             // 
-            this.addressTB.Location = new System.Drawing.Point(108, 98);
+            this.addressTB.Location = new System.Drawing.Point(89, 98);
             this.addressTB.Multiline = true;
             this.addressTB.Name = "addressTB";
             this.addressTB.Size = new System.Drawing.Size(156, 71);
@@ -116,7 +117,7 @@
             // 
             // addEmployeeBTN
             // 
-            this.addEmployeeBTN.Location = new System.Drawing.Point(179, 175);
+            this.addEmployeeBTN.Location = new System.Drawing.Point(160, 175);
             this.addEmployeeBTN.Name = "addEmployeeBTN";
             this.addEmployeeBTN.Size = new System.Drawing.Size(85, 30);
             this.addEmployeeBTN.TabIndex = 8;
@@ -126,7 +127,7 @@
             // 
             // readFilesRTB
             // 
-            this.readFilesRTB.Location = new System.Drawing.Point(280, 23);
+            this.readFilesRTB.Location = new System.Drawing.Point(251, 23);
             this.readFilesRTB.Name = "readFilesRTB";
             this.readFilesRTB.Size = new System.Drawing.Size(258, 182);
             this.readFilesRTB.TabIndex = 9;
@@ -134,9 +135,9 @@
             // 
             // findEmployeeBTN
             // 
-            this.findEmployeeBTN.Location = new System.Drawing.Point(280, 211);
+            this.findEmployeeBTN.Location = new System.Drawing.Point(251, 211);
             this.findEmployeeBTN.Name = "findEmployeeBTN";
-            this.findEmployeeBTN.Size = new System.Drawing.Size(96, 34);
+            this.findEmployeeBTN.Size = new System.Drawing.Size(81, 34);
             this.findEmployeeBTN.TabIndex = 10;
             this.findEmployeeBTN.Text = "Find Employee";
             this.findEmployeeBTN.UseVisualStyleBackColor = true;
@@ -149,19 +150,30 @@
             // 
             // updateBTN
             // 
-            this.updateBTN.Location = new System.Drawing.Point(442, 211);
+            this.updateBTN.Location = new System.Drawing.Point(338, 211);
             this.updateBTN.Name = "updateBTN";
-            this.updateBTN.Size = new System.Drawing.Size(96, 34);
+            this.updateBTN.Size = new System.Drawing.Size(87, 34);
             this.updateBTN.TabIndex = 11;
             this.updateBTN.Text = "Update";
             this.updateBTN.UseVisualStyleBackColor = true;
             this.updateBTN.Click += new System.EventHandler(this.updateBTN_Click);
+            // 
+            // deleteBTN
+            // 
+            this.deleteBTN.Location = new System.Drawing.Point(431, 211);
+            this.deleteBTN.Name = "deleteBTN";
+            this.deleteBTN.Size = new System.Drawing.Size(78, 34);
+            this.deleteBTN.TabIndex = 12;
+            this.deleteBTN.Text = "Delete";
+            this.deleteBTN.UseVisualStyleBackColor = true;
+            this.deleteBTN.Click += new System.EventHandler(this.deleteBTN_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 257);
+            this.Controls.Add(this.deleteBTN);
             this.Controls.Add(this.updateBTN);
             this.Controls.Add(this.findEmployeeBTN);
             this.Controls.Add(this.readFilesRTB);
@@ -200,6 +212,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button updateBTN;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button deleteBTN;
     }
 }
 

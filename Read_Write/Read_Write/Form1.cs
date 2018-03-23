@@ -89,6 +89,20 @@ namespace Read_Write
                 //save to the current file
                 File.WriteAllText(filename, readFilesRTB.Text);
             }
+        }   
+
+        private void deleteBTN_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(readFilesRTB.Text))
+            {
+                MessageBox.Show("There is nothing to delete");
+            }
+            else
+            {
+                //delete the current file
+                File.Delete(filename);
+                readFilesRTB.Clear();
+            }
         }
     }
 }
